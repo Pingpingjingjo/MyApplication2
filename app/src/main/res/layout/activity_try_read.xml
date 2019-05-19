@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tryRead">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="173dp"
+            android:layout_height="65dp"
+            android:id="@+id/readTxt"
+            app:layout_constraintTop_toBottomOf="@+id/sendBtn" android:layout_marginTop="96dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/sendTxt" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="96dp" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:id="@+id/sendBtn"
+            app:layout_constraintTop_toBottomOf="@+id/sendTxt" android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.498"/>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/readBtn"
+            app:layout_constraintTop_toBottomOf="@+id/readTxt" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+</android.support.constraint.ConstraintLayout>
