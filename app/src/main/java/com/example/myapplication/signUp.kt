@@ -34,10 +34,12 @@ class signUp : AppCompatActivity() {
             IF uservalid is false && Password is true
             then call toast
             else call both toast
-
              */
-
-
+            //PageChange()
+            Password()
+            Save()
+            Uservalid()
+            
         }//end acceptBtn
 
 
@@ -47,12 +49,9 @@ class signUp : AppCompatActivity() {
         var a = passtxt1.toString()
         var b = passTxt2.toString()
         if (a == b) {
-            return
+
         } else {
-            /*val myToast = Toast.makeText(applicationContext,"Unmatched Password",Toast.LENGTH_SHORT)
-            myToast.setGravity(Gravity.LEFT,200,200)
-            myToast.show()
-            */
+
             Toast.makeText(applicationContext, "Unmatched Password", Toast.LENGTH_SHORT).show()
         }
     }
@@ -71,8 +70,9 @@ class signUp : AppCompatActivity() {
                         val SignUpRecord = i.getValue(SignUpRecord::class.java)
                         msgList.add(SignUpRecord!!)
                     }
+                  //to check can get data from fierbase
                     val adapter = MessageAdapter(applicationContext,R.layout.messages,msgList)
-                    //listView.adapter = adapter
+                    trylist.adapter = adapter
                 }
             }
         })
@@ -88,6 +88,7 @@ class signUp : AppCompatActivity() {
         var tempRef = myRef.push()
         val users = SignUpRecord(id.toString(), nameTxt.text.toString(), AgeTxt.text.toString(), passtxt1.text.toString())
         tempRef.setValue(users)
+
 
     }
 
